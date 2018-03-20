@@ -11,7 +11,7 @@ RUN powershell -Command Add-WindowsFeature NET-WCF-HTTP-Activation45
 WORKDIR app
 
 # Port
-EXPOSE 83
+EXPOSE 8733
 
 # Copy the WCF host into the container
 COPY Bin/ .
