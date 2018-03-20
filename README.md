@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Manuel d'utilisation
 
 
@@ -31,3 +32,7 @@ Utilisation du WS "dockerisé" : lancer l'application `Client` comme une utilisat
 ## Auteur
 
 (mailto:maxime.flament@etu.unice.fr)[Maxime Flament]
+=======
+# tigli-soap-rest
+Repository to host the code for the lab http://www.tigli.fr/doku.php?id=cours:ws-rest_and_ws-soap:lab 
+>>>>>>> 5cb731fd314c47fa98e7d3a7283507458e56a73a
