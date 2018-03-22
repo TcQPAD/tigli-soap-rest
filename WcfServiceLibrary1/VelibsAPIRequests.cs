@@ -15,6 +15,21 @@ namespace MathsLibrary
         String contract = "Toulouse"; // defaults to Toulouse
         String stationID = "00110";
         
+        public async Task<string> AsyncGetVelibCounts(String cityName, String stationID)
+        {
+            Task<string> req = AsyncPerformRequest("https://api.jcdecaux.com/vls/v1/stations/" + stationID + "?contract=" + cityName + "&apiKey=" + apiKey);
+            string result = await req;
+
+            return result;
+        }
+
+        public async Task<string> AsyncListVelibStations(String cityName)
+        {
+            Task<string> req = AsyncPerformRequest("https://api.jcdecaux.com/vls/v1/stations?contract=" + cityName + "&apiKey=" + apiKey);
+            string result = await req;
+
+            return result;
+        }
 
         public string GetVelibCounts(String cityName, String stationID)
         {  
@@ -69,6 +84,17 @@ namespace MathsLibrary
             {
                 return "error";
             }
+        }
+
+        /**
+         * Asynchronous version of the web request
+         */ 
+        private Task<string> AsyncPerformRequest(String reqUrl)
+        {
+            return Task<string>.Run(() =>
+            {
+                return performRequest(reqUrl);
+            });
         }
     }
 }

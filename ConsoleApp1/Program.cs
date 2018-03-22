@@ -17,6 +17,7 @@ namespace ConsoleApp1
             VelibsAPIRequests client = new VelibsAPIRequests();
             String cityName = "Toulouse"; // default city
             String stationID = "00110"; // default stationID
+            String syn = "y";
 
             //Console.WriteLine(client.GetVelibCounts("Toulouse"));
             while (true)
@@ -37,8 +38,14 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("> Nom de la ville:");
                     cityName = Console.ReadLine();
+                    Console.WriteLine("> Synchrone? (y/n)");
+                    syn = Console.ReadLine();
+                    if (syn.Equals("y"))
+                        performListStationRequest(client, cityName, true);
+                    else
+                        performListStationRequest(client, cityName, false);
 
-                    performListStationRequest(client, cityName);
+
                 }
 
                 else if (accessPoint.Equals("get"))
@@ -49,7 +56,12 @@ namespace ConsoleApp1
                     Console.WriteLine("> ID de la station:");
                     stationID = Console.ReadLine();
 
-                    getVelibsAtStation(client, cityName, stationID);
+                    Console.WriteLine("> Synchrone? (y/n)");
+                    syn = Console.ReadLine();
+                    if (syn.Equals("y"))
+                        getVelibsAtStation(client, cityName, stationID, true);
+                    else
+                        getVelibsAtStation(client, cityName, stationID, false);
                 }
 
                 else
@@ -77,10 +89,14 @@ namespace ConsoleApp1
             Console.WriteLine("\thelp  ==>  Affiche cette aide.");
         }
 
-        private static void performListStationRequest(VelibsAPIRequests client, String cityName)
+        private static void performListStationRequest(VelibsAPIRequests client, String cityName, bool isSyn)
         {
+            Station[] json;
             // Deserializes the JSON to manipulate and parse it
-            Station[] json = JsonConvert.DeserializeObject<Station[]>(client.ListVelibStations(cityName));
+            if (isSyn)
+                json = JsonConvert.DeserializeObject<Station[]>(client.ListVelibStations(cityName));
+            else 
+                json = JsonConvert.DeserializeObject<Station[]>(client.AsyncListVelibStations(cityName).Result);
 
             Console.WriteLine("Liste des stations à " + cityName + " :");
 
@@ -94,10 +110,16 @@ namespace ConsoleApp1
             }
         }
 
-        private static void getVelibsAtStation(VelibsAPIRequests client, String cityName, String stationID)
+        private static void getVelibsAtStation(VelibsAPIRequests client, String cityName, String stationID, bool isSyn)
         {
+            Station json;
+
             // Deserializes the JSON to manipulate and parse it
-            Station json = JsonConvert.DeserializeObject<Station>(client.GetVelibCounts(cityName, stationID));
+            if (isSyn)
+                json = JsonConvert.DeserializeObject<Station>(client.GetVelibCounts(cityName, stationID));
+            else
+                json = JsonConvert.DeserializeObject<Station>(client.AsyncGetVelibCounts(cityName, stationID).Result);
+
             Console.WriteLine("Velibs disponibles au point d'accès " + json.Name + " : " + json.Available_Bikes + " vélibs");
         }
     }
