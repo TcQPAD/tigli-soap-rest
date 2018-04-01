@@ -5,27 +5,31 @@
 
 Ouvrir la solution `MathsLibrary.sln` et lancer la sous-application `Client`.
 
+## Extensions rÃ©alisÃ©es
+
+   * DÃ©ploiement (Docker)
+   * TÃ¢ches asynchrones
 
 ## Utilisation de Docker
 
-Note : il est nécessaire de démarrer et utiliser ce projet sous Windows si vous souhaitez utiliser Docker.
+Note : il est nÃ©cessaire de dÃ©marrer et utiliser ce projet sous Windows si vous souhaitez utiliser Docker.
 En effet, il n'existe pas de version de WCF sous Linux.
 
 Lancer le WS avec Docker : 
 
-Démarrer `Docker For Windows`
+DÃ©marrer `Docker For Windows`
 
-Ouvrir un terminal et aller dans le répertoire `publish/` contenu dans la solution
+Ouvrir un terminal et aller dans le rÃ©pertoire `publish/` contenu dans la solution
 
 Entrer : `docker build -t wcfhost:latest -t wcfhost:1 .`
 
-	L'installation peut durer un certain temps puisque Docker doit récupérer l'image windowsservercore qui pèse plus de 6GO.
+	L'installation peut durer un certain temps puisque Docker doit rÃ©cupÃ©rer l'image windowsservercore qui pÃ¨se plus de 6GO.
 
 Une fois le build fini, entrer : `docker run -itd --name host wcfhost`
 
-Si le run échoue (pas d'image host), re-lancer le build en vérifiant que les étapes précédentes ont été respectées
+Si le run Ã©choue (pas d'image host), re-lancer le build en vÃ©rifiant que les Ã©tapes prÃ©cÃ©dentes ont Ã©tÃ© respectÃ©es
 
-Utilisation du WS "dockerisé" : lancer l'application `Client` comme une utilisation de la solution sans Docker.
+Utilisation du WS "dockerisÃ©" : lancer l'application `Client` comme une utilisation de la solution sans Docker.
 
 
 ## Auteur
