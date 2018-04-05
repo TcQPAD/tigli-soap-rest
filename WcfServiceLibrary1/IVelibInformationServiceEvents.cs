@@ -1,0 +1,15 @@
+﻿using System;
+using System.Text;
+using System.ServiceModel;
+
+namespace MathsLibrary
+{
+    interface IVelibInformationServiceEvents
+    {
+        [OperationContract(IsOneWay = true)]
+        void Calculated(int nOp, double dblNum1, double dblNum2, double dblResult);
+
+        [OperationContract(IsOneWay = true)]
+        void CalculationFinished();
+    }
+}

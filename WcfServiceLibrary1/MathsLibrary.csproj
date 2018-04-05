@@ -45,10 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMathsOperations.cs" />
+    <Compile Include="IVelibInformationService.cs" />
+    <Compile Include="IVelibInformationServiceEvents.cs" />
     <Compile Include="IVelibsAPIRequests.cs" />
     <Compile Include="MathsOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VelibsAPIRequests.cs" />
+    <Compile Include="VelibInformationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
