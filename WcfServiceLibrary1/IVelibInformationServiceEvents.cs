@@ -4,7 +4,7 @@ using System.ServiceModel;
 
 namespace MathsLibrary
 {
-    interface IVelibInformationServiceEvents
+    public interface IVelibInformationServiceEvents
     {
         [OperationContract(IsOneWay = true)]
         void Calculated(int nOp, double dblNum1, double dblNum2, double dblResult);

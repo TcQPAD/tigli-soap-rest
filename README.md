@@ -1,3 +1,16 @@
+# NOTE IMPORTANTE 
+
+**Je n'ai pas pu finir le Lab 2 dû à un bug assez ennuyeux de Visual Studio.**
+
+**Lorsque je veux ajouter une référence à l'application console du client (URL du endpoint), mon IDE crash et détruit l'ensemble de mon projet**.
+
+**J'ai essayé de ré-importer le projet, recommencé de zéro et le bug persiste.**
+
+** Le code livré sur cette branche n'est donc pas testée, je ne sais pas s'il fonctionne puisque je ne peux pas ajouter de référence et donc lancer le client.**
+
+Je vous ai contacté via Slack afin de vous faire part du problème et vous fournir un screenshot détaillant le problème.
+
+
 # Manuel d'utilisation
 
 

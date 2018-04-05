@@ -5,7 +5,7 @@ using System.ServiceModel;
 namespace MathsLibrary
 {
     [ServiceContract(CallbackContract = typeof(IVelibInformationServiceEvents))]
-    interface IVelibInformationService
+    public interface IVelibInformationService
     {
         [OperationContract]
         void Calculate(int nOp, double dblNum1, double dblNum2);

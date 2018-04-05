@@ -6,27 +6,7 @@ namespace ClientService
     {
         static void Main(string[] args)
         {
-            CalcServiceReference.CalcServiceClient objClient = new CalcServiceReference.CalcServiceClient(iCntxt);
-
-            objClient.SubscribeCalculatedEvent();
-
-            objClient.SubscribeCalculationFinishedEvent();
-
-            double dblNum1 = 1000, dblNum2 = 2000;
-
-            objClient.Calculate(0, dblNum1, dblNum2);
-
-            dblNum1 = 2000; dblNum2 = 4000;
-
-            objClient.Calculate(1, dblNum1, dblNum2);
-
-            dblNum1 = 2000; dblNum2 = 4000;
-
-            objClient.Calculate(2, dblNum1, dblNum2);
-
-            dblNum1 = 2000; dblNum2 = 400;
-
-            objClient.Calculate(3, dblNum1, dblNum2);
+           
         }
     }
 }

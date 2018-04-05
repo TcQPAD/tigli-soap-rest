@@ -4,7 +4,7 @@ using System.ServiceModel;
 
 namespace MathsLibrary
 {
-    class VelibInformationService : IVelibInformationService
+    public class VelibInformationService : IVelibInformationService
     {
         static Action<int, double, double, double> m_Event1 = delegate { };
         static Action m_Event2 = delegate { };
