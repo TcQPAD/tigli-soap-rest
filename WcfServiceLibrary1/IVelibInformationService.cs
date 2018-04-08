@@ -15,5 +15,8 @@ namespace MathsLibrary
 
         [OperationContract]
         void SubscribeCalculationFinishedEvent();
+
+        [OperationContract]
+        void numberBikesChanged(String city, String station, int sleepTime);
     }
 }

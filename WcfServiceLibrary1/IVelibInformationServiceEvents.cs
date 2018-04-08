@@ -11,5 +11,8 @@ namespace MathsLibrary
 
         [OperationContract(IsOneWay = true)]
         void CalculationFinished();
+
+        [OperationContract(IsOneWay = true)]
+        void numberBikesChanged(String city, String station, int sleepTime);
     }
 }
