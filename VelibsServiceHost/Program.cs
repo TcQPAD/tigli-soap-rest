@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 
 namespace VelibServiceHost
 {
@@ -8,6 +9,9 @@ namespace VelibServiceHost
         {
             ServiceHost host = new ServiceHost(typeof(MathsLibrary.VelibInformationService));
             host.Open();
+            Console.WriteLine("The service is ready.");
+            Console.WriteLine("Press <ENTER> to terminate service.");
+            Console.ReadLine();
             host.Close();
         }
     }

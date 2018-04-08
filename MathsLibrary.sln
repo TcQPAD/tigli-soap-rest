@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsLibrary", "WcfServiceL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "ConsoleApp1\Client.csproj", "{C88A47C3-07D1-496C-B789-4F5786A1F4F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "ClientService\ClientService.csproj", "{45919D14-8E2D-41D6-8016-AFF9C5BB03A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientService", "ClientService\ClientService.csproj", "{45919D14-8E2D-41D6-8016-AFF9C5BB03A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibServiceHost", "VelibServiceHost$\VelibServiceHost.csproj", "{BC1C2D3F-3574-42E5-BBB5-D0BA2C1B2586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibsServiceHost", "VelibsServiceHost\VelibsServiceHost.csproj", "{004CBD56-1474-4E75-B04D-06AAB62C073B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{45919D14-8E2D-41D6-8016-AFF9C5BB03A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45919D14-8E2D-41D6-8016-AFF9C5BB03A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45919D14-8E2D-41D6-8016-AFF9C5BB03A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC1C2D3F-3574-42E5-BBB5-D0BA2C1B2586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC1C2D3F-3574-42E5-BBB5-D0BA2C1B2586}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC1C2D3F-3574-42E5-BBB5-D0BA2C1B2586}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC1C2D3F-3574-42E5-BBB5-D0BA2C1B2586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004CBD56-1474-4E75-B04D-06AAB62C073B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004CBD56-1474-4E75-B04D-06AAB62C073B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004CBD56-1474-4E75-B04D-06AAB62C073B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004CBD56-1474-4E75-B04D-06AAB62C073B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
